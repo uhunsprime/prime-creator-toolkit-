@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>Prime — Daily Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand-mark">P</div>
+      <div>
+        <p class="eyebrow">YOUR DAY, YOUR WAY</p>
+        <h1>Prime</h1>
+      </div>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">DAILY PLANNER</p>
+      <h2>Make today count.</h2>
+      <p class="muted">Write down what matters. Take it one task at a time.</p>
+    </section>
+
+    <section class="panel">
+      <form id="task-form">
+        <label for="task-input">What do you need to do?</label>
+        <div class="add-row">
+          <input id="task-input" type="text" maxlength="120" placeholder="e.g. Study biology for 30 minutes" autocomplete="off" required>
+          <button type="submit">Add task</button>
+        </div>
+      </form>
+      <div class="task-summary">
+        <span id="task-count">0 tasks</span>
+        <button id="clear-completed" class="text-button" type="button">Clear completed</button>
+      </div>
+      <ul id="task-list" aria-live="polite"></ul>
+      <p id="empty-state" class="empty">Your list is clear. Add your first task above.</p>
+    </section>
+
+    <footer>
+      <p>Prime • A simple start to a more organised day.</p>
+      <p class="small">Your tasks are saved in this browser on this device.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
